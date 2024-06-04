@@ -1,1 +1,14 @@
-GET http://localhost:3000/users
+# FRONTEND
+# Obtener el index.html del proyecto
+GET http://localhost:9000
+
+###
+# Peticion prueba a Google
+GET https://www.google.com/
+
+### -*******************************************************************************-
+
+###
+# API
+# Obtener los roles (Prueba)
+GET http://localhost:4000/userRoles

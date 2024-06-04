@@ -1,4 +1,21 @@
 {
-  "users": [],
-  "tasks": []
+  "userRoles": [
+    {
+      "id": "1",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "role": "visitor"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Daniel",
+      "email": "daniel@gmail.com",
+      "password": "Daniel12345",
+      "roleId": "1"
+    }
+  ]
 }

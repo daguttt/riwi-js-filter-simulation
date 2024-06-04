@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve --mode development --open",
     "build": "webpack --mode production",
-    "server": "json-server server/db.json"
+    "server": "json-server server/db.json --port 4000"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
