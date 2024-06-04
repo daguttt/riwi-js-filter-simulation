@@ -1,6 +1,6 @@
 import { routes } from './routes';
 
-function navigateTo(targetPath) {
+export function navigateTo(targetPath) {
   window.history.pushState({}, '', targetPath); // Ej: -> '/login'
   Router();
 }

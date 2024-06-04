@@ -7,8 +7,27 @@ GET http://localhost:9000
 GET https://www.google.com/
 
 ### -*******************************************************************************-
-
+@host = http://localhost:4000
 ###
 # API
 # Obtener los roles (Prueba)
-GET http://localhost:4000/userRoles
+GET {{host}}/userRoles
+
+
+### -*********************************************************-
+# USERS routes
+# Get all users
+GET {{host}}/users
+
+###
+
+# Register user
+POST {{host}}/users
+Content-Type: application/json
+
+{
+  "name": "pacho",
+  "email": "pacho@gmail.com",
+  "password": "Pacho12345",
+  "userRoleId": "2"
+}

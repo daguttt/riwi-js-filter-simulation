@@ -15,7 +15,7 @@
       "name": "Daniel",
       "email": "daniel@gmail.com",
       "password": "Daniel12345",
-      "roleId": "1"
+      "userRoleId ": "1"
     }
   ]
 }
