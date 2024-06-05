@@ -68,20 +68,27 @@ export function RegisterPageComponent() {
   // -*********************************************************-
   // Logica del Registro
   const $formRegister = document.getElementById('form-register');
+
   const $nameInput = document.getElementById('name');
   const $emailInput = document.getElementById('email');
   const $passwordInput = document.getElementById('password');
+  const $submitButtonRegister = document.querySelector('[type="submit"]');
 
   $formRegister.addEventListener('submit', async (event) => {
     event.preventDefault();
+
+    // Desactivamos el botón para hacer submit
+    $submitButtonRegister.setAttribute('disabled', 'true');
+
     // Validar el correo
     const isValidEmail = emailValidator($emailInput.value);
     if (!isValidEmail) {
       alert('Email no válido. Corrígelo.');
+      $submitButtonRegister.removeAttribute('disabled');
       return;
     }
 
-    // Validar que si el usuario ya está registran
+    // Validar que si el usuario ya está registrado
     // 1. Obtener todos los usuarios
     const users = await getUsers();
     // 2. Con base en el email validar si el usuario ya está registrado
@@ -89,16 +96,37 @@ export function RegisterPageComponent() {
 
     if (foundUser) {
       alert('Usuario ya registrado.');
+      $submitButtonRegister.removeAttribute('disabled');
       return;
     }
 
-    // Si no está registrado, lo registramos
-    try {
-      await register($nameInput.value, $emailInput.value, $passwordInput.value);
-      alert('Registro exito. Redirigiendo al Login');
-      navigateTo('/login');
-    } catch (err) {
-      alert;
-    }
+    // Si no está registrado, lo registramos ✅
+    const response = await fetch(`${API_URL}/users`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: $nameInput.value,
+        email: $emailInput.value,
+        password: $passwordInput.value,
+        userRoleId: '2',
+      }),
+    });
+
+    const registeredUser = await response.json();
+
+    // 1. Generar el token (da igual como) y guardarlo en el LocalStorage
+    const token = Math.random().toString(36).slice(2);
+    localStorage.setItem('token', token);
+    console.log({ token });
+
+    // 2. Guardar el objeto del usuario en el LocalStorage
+    const { password: _, ...userRestOfProperties } = registeredUser;
+    localStorage.setItem('user', JSON.stringify(userRestOfProperties));
+
+    alert('Registro exito. Redirigiendo al Dashboard');
+
+    navigateTo('/dashboard/products');
   });
 }

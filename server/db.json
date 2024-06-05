@@ -16,6 +16,20 @@
       "email": "daniel@gmail.com",
       "password": "Daniel12345",
       "userRoleId ": "1"
+    },
+    {
+      "id": "5c76",
+      "name": "pacho",
+      "email": "pacho@gmail.com",
+      "password": "Pacho12345",
+      "userRoleId": "2"
+    },
+    {
+      "id": "aded",
+      "name": "Pacho 2",
+      "email": "pacho2@gmail.com",
+      "password": "Pacho12345",
+      "userRoleId": "2"
     }
   ]
 }
