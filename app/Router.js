@@ -1,3 +1,4 @@
+import { PrivateLayout } from './layouts/private-layout';
 import { routes } from './routes';
 
 export function navigateTo(targetPath) {
@@ -11,16 +12,25 @@ export function Router() {
   // 2. Obtener los search params actuales
   const currentSearchParams = new URLSearchParams(window.location.search);
   console.log({ currentPath, currentSearchParams });
+  // 3. Obtener el token para saber si el usuario tiene sesión activa
+  const token = localStorage.getItem('token');
+  // 4. Validamos si quiere ir al /login teniendo la sesión activa
+  if ((currentPath === '/login' || currentPath === '/register') && token) {
+    return navigateTo('/dashboard/products');
+  }
   // console.log({ path });
-  // 3. Obtener la ruta descrita en `routes` que se empareje con la ruta actual
+  // 5. Obtener la ruta descrita en `routes` que se empareje con la ruta actual
   const publicRoute = routes.public.find((r) => r.path === currentPath);
-  const privatRoute = routes.private.find((r) => r.path === currentPath);
-  // 4. Validar si la ruta actual existe en las rutas descritas
+  const privateRoute = routes.private.find((r) => r.path === currentPath);
+  // 6. Validar si la ruta actual existe en las rutas descritas
   if (publicRoute) {
-    // 5. Ejecutar el componente asociado a la ruta pasandole los search params.
+    // 7. Ejecutar el componente asociado a la ruta pasandole los search params.
     publicRoute.component(currentSearchParams);
-  } else if (privatRoute) {
-    privatRoute.component(currentSearchParams);
+  } else if (privateRoute && token) {
+    const { html, logic } = privateRoute.component(currentSearchParams);
+    PrivateLayout(html, logic);
+  } else if (privateRoute && !token) {
+    navigateTo('/login');
   } else {
     console.error('No se encontró la ruta');
     // Redirigir al /not-found

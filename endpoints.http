@@ -37,3 +37,15 @@ Content-Type: application/json
 # Get all products
 
 GET {{host}}/products
+
+###
+# Edit a product
+PATCH {{host}}/products/12
+Content-Type: application/json
+
+{
+  "description": "Blusa de seda",
+  "price": 80000,
+  "stock": 18,
+  "category": "Outfit"
+}

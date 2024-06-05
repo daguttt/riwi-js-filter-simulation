@@ -1,7 +1,7 @@
+import { API_URL } from '../../../constants';
 import { emailValidator } from '../../../helpers/email-validator';
 import { navigateTo } from '../../../Router';
-
-const API_URL = 'http://localhost:4000';
+import { getUsers } from '../../../services/get-user';
 
 async function register(name, email, password) {
   const userToRegister = {
@@ -34,12 +34,6 @@ async function register(name, email, password) {
   }
 }
 
-async function getUsers() {
-  const response = await fetch(`${API_URL}/users`);
-  const users = await response.json();
-  return users;
-}
-
 export function RegisterPageComponent() {
   const $root = document.getElementById('root');
   $root.innerHTML = /*html*/ `
@@ -61,6 +55,10 @@ export function RegisterPageComponent() {
           </div>
           <button type="submit">Registrarse</button>
         </form>
+        <div>
+          <p>¿Tienes cuenta?</p>
+          <button id="login-btn">Inicia sesión</button>
+        </div>
       </div>
     </main>
   `;
@@ -118,6 +116,8 @@ export function RegisterPageComponent() {
 
     // 1. Generar el token (da igual como) y guardarlo en el LocalStorage
     const token = Math.random().toString(36).slice(2);
+    // const token = window.crypto.randomUUID(); // -> adasdlfk-asdf234-assñ12-asfdfasd
+    // Unique Universal IDentifier
     localStorage.setItem('token', token);
     console.log({ token });
 
@@ -128,5 +128,10 @@ export function RegisterPageComponent() {
     alert('Registro exito. Redirigiendo al Dashboard');
 
     navigateTo('/dashboard/products');
+  });
+
+  const $loginButton = document.getElementById('login-btn');
+  $loginButton.addEventListener('click', () => {
+    navigateTo('/login');
   });
 }

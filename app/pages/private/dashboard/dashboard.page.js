@@ -1,11 +1,10 @@
 import { navigateTo } from '../../../Router';
+import { API_URL } from '../../../constants';
 
-const API_URL = 'http://localhost:4000';
 export function DashboardPageComponent() {
   const user = JSON.parse(localStorage.getItem('user'));
 
-  const $root = document.getElementById('root');
-  $root.innerHTML = /*html*/ `
+  const html = /*html*/ `
     <h1>Todos los productos</h1>
     <section class="products-container"></section>
   `;
@@ -130,5 +129,5 @@ export function DashboardPageComponent() {
     //   });
     // });
   };
-  logic();
+  return { html, logic };
 }

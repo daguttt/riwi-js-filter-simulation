@@ -15,7 +15,7 @@
       "name": "Daniel",
       "email": "daniel@gmail.com",
       "password": "Daniel12345",
-      "userRoleId ": "1"
+      "userRoleId": "1"
     },
     {
       "id": "5c76",
@@ -29,6 +29,13 @@
       "name": "Pacho 2",
       "email": "pacho2@gmail.com",
       "password": "Pacho12345",
+      "userRoleId": "2"
+    },
+    {
+      "id": "f4a3",
+      "name": "Samuel",
+      "email": "samuel@gmail.com",
+      "password": "Samuel12345",
       "userRoleId": "2"
     }
   ],
@@ -85,8 +92,8 @@
       "id": "7",
       "name": "Reloj",
       "description": "Reloj de pulsera",
-      "price": 180000,
-      "stock": 12,
+      "price": "200000",
+      "stock": "12",
       "category": "Accesorios"
     },
     {
@@ -125,7 +132,7 @@
       "id": "12",
       "name": "Blusa",
       "description": "Blusa de seda",
-      "price": 50000,
+      "price": 80000,
       "stock": 18,
       "category": "Outfit"
     },
