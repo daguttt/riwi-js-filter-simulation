@@ -31,3 +31,9 @@ Content-Type: application/json
   "password": "Pacho12345",
   "userRoleId": "2"
 }
+
+### -*********************************************************-
+# PRODUCTS routes
+# Get all products
+
+GET {{host}}/products
