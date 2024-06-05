@@ -31,5 +31,303 @@
       "password": "Pacho12345",
       "userRoleId": "2"
     }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Camisa",
+      "description": "Camisa Oversize 100% Algodón",
+      "price": 43000,
+      "stock": 10,
+      "category": "Outfit"
+    },
+    {
+      "id": "2",
+      "name": "Pantalón",
+      "description": "Pantalón de mezclilla",
+      "price": 60000,
+      "stock": 15,
+      "category": "Outfit"
+    },
+    {
+      "id": "3",
+      "name": "Chaqueta",
+      "description": "Chaqueta de cuero",
+      "price": 150000,
+      "stock": 5,
+      "category": "Outfit"
+    },
+    {
+      "id": "4",
+      "name": "Zapatos",
+      "description": "Zapatos de cuero negro",
+      "price": 120000,
+      "stock": 20,
+      "category": "Outfit"
+    },
+    {
+      "id": "5",
+      "name": "Gorra",
+      "description": "Gorra ajustable",
+      "price": 25000,
+      "stock": 30,
+      "category": "Accesorios"
+    },
+    {
+      "id": "6",
+      "name": "Bufanda",
+      "description": "Bufanda de lana",
+      "price": 35000,
+      "stock": 25,
+      "category": "Accesorios"
+    },
+    {
+      "id": "7",
+      "name": "Reloj",
+      "description": "Reloj de pulsera",
+      "price": 180000,
+      "stock": 12,
+      "category": "Accesorios"
+    },
+    {
+      "id": "8",
+      "name": "Bolso",
+      "description": "Bolso de cuero",
+      "price": 90000,
+      "stock": 8,
+      "category": "Accesorios"
+    },
+    {
+      "id": "9",
+      "name": "Cinturón",
+      "description": "Cinturón de cuero",
+      "price": 40000,
+      "stock": 50,
+      "category": "Accesorios"
+    },
+    {
+      "id": "10",
+      "name": "Vestido",
+      "description": "Vestido de fiesta",
+      "price": 70000,
+      "stock": 10,
+      "category": "Outfit"
+    },
+    {
+      "id": "11",
+      "name": "Falda",
+      "description": "Falda plisada",
+      "price": 45000,
+      "stock": 20,
+      "category": "Outfit"
+    },
+    {
+      "id": "12",
+      "name": "Blusa",
+      "description": "Blusa de seda",
+      "price": 50000,
+      "stock": 18,
+      "category": "Outfit"
+    },
+    {
+      "id": "13",
+      "name": "Suéter",
+      "description": "Suéter de lana",
+      "price": 55000,
+      "stock": 22,
+      "category": "Outfit"
+    },
+    {
+      "id": "14",
+      "name": "Chaleco",
+      "description": "Chaleco acolchado",
+      "price": 60000,
+      "stock": 10,
+      "category": "Outfit"
+    },
+    {
+      "id": "15",
+      "name": "Sombrero",
+      "description": "Sombrero de paja",
+      "price": 30000,
+      "stock": 35,
+      "category": "Accesorios"
+    },
+    {
+      "id": "16",
+      "name": "Gafas de sol",
+      "description": "Gafas de sol polarizadas",
+      "price": 80000,
+      "stock": 28,
+      "category": "Accesorios"
+    },
+    {
+      "id": "17",
+      "name": "Aretes",
+      "description": "Aretes de oro",
+      "price": 100000,
+      "stock": 40,
+      "category": "Accesorios"
+    },
+    {
+      "id": "18",
+      "name": "Anillo",
+      "description": "Anillo de plata",
+      "price": 50000,
+      "stock": 15,
+      "category": "Accesorios"
+    },
+    {
+      "id": "19",
+      "name": "Collar",
+      "description": "Collar de perlas",
+      "price": 120000,
+      "stock": 5,
+      "category": "Accesorios"
+    },
+    {
+      "id": "20",
+      "name": "Pañuelo",
+      "description": "Pañuelo de seda",
+      "price": 20000,
+      "stock": 50,
+      "category": "Accesorios"
+    },
+    {
+      "id": "21",
+      "name": "Sandalias",
+      "description": "Sandalias de cuero",
+      "price": 60000,
+      "stock": 18,
+      "category": "Outfit"
+    },
+    {
+      "id": "22",
+      "name": "Botas",
+      "description": "Botas de montaña",
+      "price": 130000,
+      "stock": 8,
+      "category": "Outfit"
+    },
+    {
+      "id": "23",
+      "name": "Zapatos deportivos",
+      "description": "Zapatos de running",
+      "price": 100000,
+      "stock": 22,
+      "category": "Outfit"
+    },
+    {
+      "id": "24",
+      "name": "Traje",
+      "description": "Traje formal",
+      "price": 200000,
+      "stock": 5,
+      "category": "Outfit"
+    },
+    {
+      "id": "25",
+      "name": "Corbata",
+      "description": "Corbata de seda",
+      "price": 30000,
+      "stock": 45,
+      "category": "Accesorios"
+    },
+    {
+      "id": "26",
+      "name": "Guantes",
+      "description": "Guantes de cuero",
+      "price": 40000,
+      "stock": 20,
+      "category": "Accesorios"
+    },
+    {
+      "id": "27",
+      "name": "Calcetines",
+      "description": "Calcetines de algodón",
+      "price": 15000,
+      "stock": 60,
+      "category": "Accesorios"
+    },
+    {
+      "id": "28",
+      "name": "Leggings",
+      "description": "Leggings deportivos",
+      "price": 35000,
+      "stock": 25,
+      "category": "Outfit"
+    },
+    {
+      "id": "29",
+      "name": "Sudadera",
+      "description": "Sudadera con capucha",
+      "price": 50000,
+      "stock": 30,
+      "category": "Outfit"
+    },
+    {
+      "id": "30",
+      "name": "Chaqueta vaquera",
+      "description": "Chaqueta de mezclilla",
+      "price": 75000,
+      "stock": 15,
+      "category": "Outfit"
+    },
+    {
+      "id": "31",
+      "name": "Camisa formal",
+      "description": "Camisa de vestir",
+      "price": 55000,
+      "stock": 20,
+      "category": "Outfit"
+    },
+    {
+      "id": "32",
+      "name": "Pantalones cortos",
+      "description": "Pantalones cortos de algodón",
+      "price": 35000,
+      "stock": 25,
+      "category": "Outfit"
+    },
+    {
+      "id": "33",
+      "name": "Camiseta sin mangas",
+      "description": "Camiseta de tirantes",
+      "price": 20000,
+      "stock": 50,
+      "category": "Outfit"
+    },
+    {
+      "id": "34",
+      "name": "Pijama",
+      "description": "Pijama de algodón",
+      "price": 40000,
+      "stock": 18,
+      "category": "Outfit"
+    },
+    {
+      "id": "35",
+      "name": "Bata",
+      "description": "Bata de baño",
+      "price": 45000,
+      "stock": 22,
+      "category": "Outfit"
+    },
+    {
+      "id": "36",
+      "name": "Chalina",
+      "description": "Chalina de lana",
+      "price": 30000,
+      "stock": 28,
+      "category": "Accesorios"
+    },
+    {
+      "id": "37",
+      "name": "Cartera",
+      "description": "Cartera de cuero",
+      "price": 70000,
+      "stock": 12,
+      "category": "Accesorios"
+    }
   ]
 }
